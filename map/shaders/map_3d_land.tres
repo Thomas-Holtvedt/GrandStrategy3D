@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://bskyx0snkmyb8"]
+
+[ext_resource type="Shader" path="res://map/shaders/map_3d_land.gdshader" id="1_lctno"]
+[ext_resource type="Texture2D" uid="uid://cmegxcduma1ea" path="res://map/map_data/HeightMap.bmp" id="2_sv4mj"]
+[ext_resource type="Texture2D" uid="uid://dnxm5gyjjia0r" path="res://map/map_data/NormalMap.bmp" id="3_0fyba"]
+[ext_resource type="Texture2D" uid="uid://b0e46n5ws1qt0" path="res://map/map_data/ProvinceMap.bmp" id="4_fdsrw"]
+[ext_resource type="Texture2D" uid="uid://bhb7tg3vp1k0c" path="res://map/map_data/TerrainMap.png" id="4_s78cg"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_lctno")
+shader_parameter/province_selected_color = Color(0, 0, 0, 1)
+shader_parameter/province_highlight_color = Color(0, 0.886275, 0, 1)
+shader_parameter/state_selected_color = null
+shader_parameter/state_highlight_color = Color(1, 1, 1, 1)
+shader_parameter/heightmap_image = ExtResource("2_sv4mj")
+shader_parameter/terrainmap_image = ExtResource("4_s78cg")
+shader_parameter/normalmap_image = ExtResource("3_0fyba")
+shader_parameter/provincemap_image = ExtResource("4_fdsrw")

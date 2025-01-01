@@ -1,29 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://c7e85p8l8t202"]
+[gd_scene load_steps=15 format=3 uid="uid://c7e85p8l8t202"]
 
 [ext_resource type="Script" path="res://map/scripts/map_3d.gd" id="1_ws881"]
-[ext_resource type="Shader" path="res://map/shaders/map_3d_land.gdshader" id="2_u4q6e"]
-[ext_resource type="Texture2D" uid="uid://cmegxcduma1ea" path="res://map/map_data/HeightMap.bmp" id="3_vgo4n"]
-[ext_resource type="Texture2D" uid="uid://dnxm5gyjjia0r" path="res://map/map_data/NormalMap.bmp" id="4_gra2o"]
-[ext_resource type="Texture2D" uid="uid://bhb7tg3vp1k0c" path="res://map/map_data/TerrainMap.png" id="5_x4tfx"]
+[ext_resource type="Material" uid="uid://bskyx0snkmyb8" path="res://map/shaders/map_3d_land.tres" id="2_wqeyg"]
+[ext_resource type="Texture2D" uid="uid://b0e46n5ws1qt0" path="res://map/map_data/ProvinceMap.bmp" id="5_7bbd7"]
 [ext_resource type="Shader" path="res://map/shaders/map_3d_sea.gdshader" id="6_lgr8y"]
 [ext_resource type="Texture2D" uid="uid://bg4eko5n8y8a1" path="res://map/map_data/OceanMap.png" id="7_eipti"]
 
 [sub_resource type="Environment" id="Environment_dtm68"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u52ts"]
-render_priority = 0
-shader = ExtResource("2_u4q6e")
-shader_parameter/province_selected_color = null
-shader_parameter/province_highlight_color = null
-shader_parameter/state_selected_color = null
-shader_parameter/state_highlight_color = null
-shader_parameter/heightmap_image = ExtResource("3_vgo4n")
-shader_parameter/terrainmap_image = ExtResource("5_x4tfx")
-shader_parameter/normalmap_image = ExtResource("4_gra2o")
-shader_parameter/provincemap_image = ExtResource("5_x4tfx")
-
 [sub_resource type="PlaneMesh" id="PlaneMesh_wxlsn"]
-material = SubResource("ShaderMaterial_u52ts")
+material = ExtResource("2_wqeyg")
 size = Vector2(5632, 2112)
 subdivide_width = 5632
 subdivide_depth = 2112
@@ -78,6 +64,7 @@ shape = SubResource("BoxShape3D_be08l")
 transform = Transform3D(0.999687, 0.0163429, -0.0189521, 0.0215233, -0.175105, 0.984314, 0.0127679, -0.984414, -0.175402, 2933.09, 499.201, 577.724)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("5_7bbd7")
 
 [node name="Provinces" type="Node" parent="."]
 
