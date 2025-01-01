@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://coplv16epkl60"]
+
+[ext_resource type="PackedScene" uid="uid://c7e85p8l8t202" path="res://map/scenes/map_3d.tscn" id="1_c7xnj"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Map3D" parent="." instance=ExtResource("1_c7xnj")]
